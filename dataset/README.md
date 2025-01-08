@@ -44,7 +44,7 @@ Dataset/
 
 1. Place all images of the corresponding vehicle type in their respective folders.
 2. Ensure the image files are in common formats like `.jpg`, `.png`, or `.jpeg`.
-3. Follow a consistent naming convention for images if possible (e.g., `bus1.jpg`, `car1.jpg`).
+3. Follow a consistent naming convention for images if possible by either using rename.py or manually (e.g., `bus1.jpg`, `car1.jpg`).
 4. Avoid mixing images of different vehicle types in the same folder.
 
 ## Note
