@@ -31,7 +31,7 @@ The dataset used for this project can be downloaded from the following link:
 
 ### Libraries
 
-- Python 3.7+
+- Python 3.7-3.10
 - TensorFlow
 - NumPy
 - Matplotlib
