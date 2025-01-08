@@ -13,7 +13,7 @@ This project is a machine learning-based application for classifying images of v
 ## Dataset
 
 The dataset used for this project can be downloaded from the following link:
-[Download Dataset](<dataset_link_here>)
+[Download Dataset](<https://drive.google.com/drive/folders/1hpdSMkNkjEXOOlL6qusAZnkRv6Rf9RED>)
 
 ## Folder Structure
 
@@ -42,7 +42,7 @@ The dataset used for this project can be downloaded from the following link:
 ### Installation
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/syedimrantirmizi/AI-Project
 cd VehicleTypeClassification
 pip install tensorflow numpy matplotlib scikit-learn seaborn pillow
 ```
