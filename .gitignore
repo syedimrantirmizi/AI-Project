@@ -1,0 +1,7 @@
+dataset/
+randomimagestest/*.png
+randomimagestest/*.jpg
+randomimagestest/*.jpeg
+singleimagetest/*.png
+singleimagetest/*.jpg
+singleimagetest/*.jpeg
