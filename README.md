@@ -70,7 +70,7 @@ python testing.py
 
 Modify `test_image_path` to specify your image. Generates visual output in `singleimagetest`.
 
-### 3. Test Random Images
+### 3. Test Random Images (You can skip this if you are using my dataset)
 
 ```bash
 python randomImages.py
