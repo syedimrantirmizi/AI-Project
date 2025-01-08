@@ -1,4 +1,15 @@
-dataset/
+dataset/Bus/*.jpg
+dataset/Bus/*.png
+dataset/Bus/*.jpeg
+dataset/Car/*.jpg
+dataset/Car/*.png
+dataset/Car/*.jpeg
+dataset/motorcycle/*.jpg
+dataset/motorcycle/*.png
+dataset/motorcycle/*.jpeg
+dataset/Truck/*.jpg
+dataset/Truck/*.png
+dataset/Truck/*.jpeg
 randomimagestest/*.png
 randomimagestest/*.jpg
 randomimagestest/*.jpeg
