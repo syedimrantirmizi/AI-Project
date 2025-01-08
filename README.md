@@ -68,18 +68,21 @@ This script:
 python testing.py
 ```
 
-Modify `test_image_path` to specify your image. Generates visual output in `singleimagetest`.
+Modify `test_image_path` to specify your image.
+- **Predicted Images:**
+  - `singleimagetest/output.png`: True vs Predicted labels for the specific images.
+  - `singleimagetest/confidence_scores.png`: Confidence scores for specific image.
 
 ### 3. Test Random Images 
 
 ```bash
 python randomImages.py
 ```
-
 Selects 10 random images and generates:
 
-- `output.png`: Displays all selected images with true and predicted labels.
-- `confidence_scores.png`: Lists confidence scores for each image.
+- **Predicted Images:**
+- `randomimagestest/output.png`: Displays all selected images with true and predicted labels.
+- `randomimagestest/confidence_scores.png`: Lists confidence scores for each image.
 
 ### 4. Rename Dataset Images (Skip if you are using my dataset)
 
@@ -100,9 +103,7 @@ Computes a confusion matrix and displays a classification report.
 ## Outputs
 
 - **Training Plots:** Accuracy and validation accuracy over epochs.
-- **Predicted Images:**
-  - `randomimagestest/output.png`: True vs Predicted labels for multiple images.
-  - `randomimagestest/confidence_scores.png`: Confidence scores for each image.
+
 - **Confusion Matrix:** A heatmap of the confusion matrix for performance evaluation.
 
 ## Example Outputs
