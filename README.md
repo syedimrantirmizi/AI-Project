@@ -70,7 +70,7 @@ python testing.py
 
 Modify `test_image_path` to specify your image. Generates visual output in `singleimagetest`.
 
-### 3. Test Random Images (You can skip this if you are using my dataset)
+### 3. Test Random Images 
 
 ```bash
 python randomImages.py
@@ -81,7 +81,7 @@ Selects 10 random images and generates:
 - `output.png`: Displays all selected images with true and predicted labels.
 - `confidence_scores.png`: Lists confidence scores for each image.
 
-### 4. Rename Dataset Images
+### 4. Rename Dataset Images (Skip if you are using my dataset)
 
 ```bash
 python rename.py
