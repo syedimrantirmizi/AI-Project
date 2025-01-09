@@ -101,7 +101,7 @@ Selects 10 random images and generates:
 python rename.py
 ```
 
-Renames all images in the `Truck` folder.
+Renames all images in the `Given Path` folder.
 
 ### 5. Evaluate the Model
 
