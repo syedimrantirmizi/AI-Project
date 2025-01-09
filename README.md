@@ -136,7 +136,9 @@ Motorcycle: 2.54%
 
 Each model produces a confusion matrix for performance evaluation. For example:
 
-![Confusion Matrix Heatmap](confusionMatrix.png)
+![Confusion Matrix Heatmap Of Densenet](./modelAccuracyAndEpochs/DenseNet121/confusionMatrix.png)
+![Confusion Matrix Heatmap Of Mobilenet](./modelAccuracyAndEpochs/mobilenet/confusionMatrix.png)
+![Confusion Matrix Heatmap Of Resnet](./modelAccuracyAndEpochs/resnet50/confusionMatrix.png)
 
 ## Authors
 
