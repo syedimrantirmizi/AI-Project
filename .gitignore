@@ -10,9 +10,4 @@ Dataset/motorcycle/*.jpeg
 Dataset/Truck/*.jpg
 Dataset/Truck/*.png
 Dataset/Truck/*.jpeg
-randomimagestest/*.png
-randomimagestest/*.jpg
-randomimagestest/*.jpeg
-singleimagetest/*.png
-singleimagetest/*.jpg
-singleimagetest/*.jpeg
+

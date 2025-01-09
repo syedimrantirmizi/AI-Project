@@ -9,8 +9,10 @@ from PIL import ImageFile
 # Enable loading of truncated images
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
+select_Model = {1 : "MobileNetV2", 2 : "resnet50", 3 : "DenseNet121"}
+model_name = select_Model[3]
 # Load the trained model
-model = load_model("vehicle_classifier.h5")
+model = load_model(f"vehicle_classifier_{model_name.lower()}.h5")
 
 # Define the class mapping
 index_to_class = {0: "Bus", 1: "Car", 2: "Truck", 3: "Motorcycle"}

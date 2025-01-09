@@ -94,6 +94,6 @@ plt.legend()
 plt.show()
 
 # Save the model
-model.save("vehicle_classifier.h5")
+model.save("vehicle_classifier_mobilenetv2.h5")
 
 print("Model trained and saved successfully!")

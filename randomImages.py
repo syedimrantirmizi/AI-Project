@@ -5,8 +5,14 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import matplotlib.pyplot as plt
 
+select_Model = {1 : "MobileNetV2", 2 : "resnet50", 3 : "DenseNet121"}
+
+# Specify the model to use
+model_name = select_Model[3]
+model_path = f"vehicle_classifier_{model_name.lower()}.h5"
+
 # Load the trained model
-model = load_model("vehicle_classifier.h5")
+model = load_model(model_path)
 
 # Define the class mapping
 index_to_class = {0: "Bus", 1: "Car", 2: "Truck", 3: "Motorcycle"}
@@ -55,6 +61,10 @@ for img_path, true_label in random_images:
     predictions.append(predicted_label)
     confidence_scores_list.append(confidence_scores)
     
+# Define the output directory based on the model used
+output_dir = f"./prediction/{model_name}/randomimagestest"
+os.makedirs(output_dir, exist_ok=True)
+
 # Plot the random images with their true and predicted labels
 plt.figure(figsize=(15, 10))
 for i, (img_path, true_label, predicted_label) in enumerate(zip([x[0] for x in random_images], true_labels, predictions)):
@@ -63,17 +73,17 @@ for i, (img_path, true_label, predicted_label) in enumerate(zip([x[0] for x in r
     plt.subplot(2, 5, i + 1)
     plt.imshow(img)
     plt.axis("off")
-    plt.title(f"True Label: {true_label}", fontsize=20, loc='center')  # True label above image
-    # plt.title(f"Predicted: {predicted_label}", fontsize=10)  # Predicted label below image
-     # Add predicted label below the image
+    plt.title(f"True Label: {true_label}", fontsize=15, loc='center')  # True label above image
     plt.text(
         0.5, -0.1, f"Predicted: {predicted_label}",
-        fontsize=20, ha='center', transform=plt.gca().transAxes
+        fontsize=15, ha='center', transform=plt.gca().transAxes
     )
 plt.tight_layout()
-plt.savefig("./randomimagestest/output.png")
+plt.savefig(os.path.join(output_dir, "output.png"))
 plt.show()
 plt.close()
+
+# Plot the confidence scores for the predictions
 plt.figure(figsize=(8, 3))
 for i, (img_path, confidence_scores) in enumerate(zip([x[0] for x in random_images], confidence_scores_list)):
     confidence_text = "\n".join(
@@ -81,11 +91,11 @@ for i, (img_path, confidence_scores) in enumerate(zip([x[0] for x in random_imag
     )
     plt.subplot(2, 5, i + 1)
     plt.axis("off")
-    plt.title(f"Confidence Score \n Predicted : {predictions[i]}", fontsize=10, loc='center')  # Confidence scores above image
+    plt.title(f"Confidence Score \n Predicted : {predictions[i]}", fontsize=10, loc='center')
     plt.gcf().text(
         0.5, 0.3, confidence_text, fontsize=8, ha="center", transform=plt.gca().transAxes
     )
 plt.tight_layout()
-plt.savefig("./randomimagestest/confidence_scores.png", bbox_inches="tight", dpi=300)
+plt.savefig(os.path.join(output_dir, "confidence_scores.png"), bbox_inches="tight", dpi=300)
 plt.show()
 plt.close()
